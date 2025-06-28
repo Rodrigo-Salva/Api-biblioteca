@@ -16,6 +16,7 @@ class Book extends Model
 
     use HasFactory;
     protected $fillable = ['title', 'isbn', 'year', 'author_id', 'category_id', 'synopsis', 'pages', 'publisher', 'stock', 'cover_image'];
+    protected $appends = ['cover_image_url'];
 
     public function author()
     {
@@ -46,5 +47,10 @@ class Book extends Model
 
     public function favoredBy(){
         return $this->belongsToMany(\App\Models\User::class, 'favorites');
+    }
+    
+    public function getCoverImageUrlAttribute()
+    {
+    return $this->cover_image ? asset('storage/' . $this->cover_image) : null; 
     }
 }
