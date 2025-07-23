@@ -28,21 +28,21 @@ La **API Biblioteca** es una solución RESTful desarrollada en Laravel para la g
 Esta API sigue una arquitectura limpia y desacoplada, inspirada en los principios de Laravel y buenas prácticas de diseño:
 
 ```
-app/
-├── Http/
-│   ├── Controllers/      # Controladores REST principales (Books, Authors, Categories, Loans, Users, Favorites, Auth)
-│   ├── Middleware/       # Middleware personalizados (IsAdmin, etc)
-│   └── Service/          # Servicios de lógica de dominio (ej: LoanService)
-├── Models/               # Modelos Eloquent (User, Book, Author, Category, Loan, Favorite)
-├── Requests/             # Validaciones de request personalizadas
-├── Providers/            # Providers de Laravel
-config/
-├── cors.php              # Configuración de CORS
-├── l5-swagger.php        # Configuración de documentación Swagger
-routes/
-├── api.php               # Definición de rutas REST (públicas, autenticadas y admin)
-database/
-├── migrations/           # Migraciones de base de datos
+📁 app/
+├── 📁 Http/
+│   ├── 📁 Controllers/      # Controladores REST principales (Books, Authors, Categories, Loans, Users, Favorites, Auth)
+│   ├── 📁 Middleware/       # Middleware personalizados (IsAdmin, etc)
+│   └── 📁 Service/          # Servicios de lógica de dominio (ej: LoanService)
+├── 📁 Models/               # Modelos Eloquent (User, Book, Author, Category, Loan, Favorite)
+├── 📁 Requests/             # Validaciones de request personalizadas
+├── 📁 Providers/            # Providers de Laravel
+📁 config/
+├── 📄 cors.php              # Configuración de CORS
+├── 📄 l5-swagger.php        # Configuración de documentación Swagger
+📁 routes/
+├── 📄 api.php               # Definición de rutas REST (públicas, autenticadas y admin)
+📁 database/
+├── 📁 migrations/           # Migraciones de base de datos
 ```
 
 **Principios clave:**
